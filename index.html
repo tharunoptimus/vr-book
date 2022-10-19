@@ -36,8 +36,8 @@
 		<a-assets>
 			<!-- images -->
 
-			<img alt="3D Image" id="sw" src="assets/images/MF8K.jpg">
-			<img alt="3D Image" id="city" src="assets/images/newyork.jpg">
+			<!-- <img alt="3D Image" id="sw" src="assets/images/MF8K.jpg"> -->
+			<img alt="3D Image" id="city" src="assets/images/newyork.png">
 			<img alt="3D Image" id="projector" src="assets/images/projector.jpg">
 			<img alt="3D Image" id="coding" src="assets/images/coding.jpg">
 			<img alt="3D Image" id="1" src="assets/images/1.jpg">
@@ -54,6 +54,8 @@
 			<a-asset-item id="class-obj" src="assets/models/classroom.obj"></a-asset-item>
 			<a-asset-item id="class01-obj" src="assets/models/classroom02.obj"></a-asset-item>
 			<a-asset-item id="class02-mtl" src="assets/models/classroom02.mtl"></a-asset-item>
+			<!-- <a-asset-item id="room" src="/assets/models/scene.glb"></a-asset-item>
+			<img src="img/camera.png" id="cam"> -->
 
 		</a-assets>
 
@@ -64,7 +66,9 @@
 			</a-animation>
 		</a-obj-model>
 
-		<a-image src="#city" position="-48 -5 8" rotation="0 -90 0" scale="35 35 35" width="2"></a-image>
+		<!-- <a-entity id="environment" gltf-model="#room" rotation="0 180 0" position="0 -4 0" scale="0.5 0.5 0.5"> -->
+
+		<a-image src="#city" position="-48 -5 8" rotation="0 90 0" scale="35 35 35" width="2"></a-image>
 
 
 		<a-image id="pg1" src="#1" position="-10 -3 -22" rotation="0 0 0" scale="13 13 13" width="2" height="3">
