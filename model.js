@@ -111,6 +111,25 @@ let lastSpot = {
 }
 
 
+document.querySelector("#playFirst").addEventListener('click', () => {})
+document.querySelector("#playSecond").addEventListener('click', () => {})
+document.querySelector("#playThird").addEventListener('click', () => {})
+document.querySelector("#playFourth").addEventListener('click', () => {})
+document.querySelector("#playFifth").addEventListener('click', () => {})
+document.querySelector("#playSixth").addEventListener('click', () => {})
+document.querySelector("#playSeventh").addEventListener('click', () => {})
+document.querySelector("#playEighth").addEventListener('click', () => {})
+
+document.querySelector("#nextFirst").addEventListener('click', () => {})
+document.querySelector("#nextSecond").addEventListener('click', () => {})
+document.querySelector("#nextThird").addEventListener('click', () => {})
+document.querySelector("#nextFourth").addEventListener('click', () => {})
+document.querySelector("#nextFifth").addEventListener('click', () => {})
+document.querySelector("#nextSixth").addEventListener('click', () => {})
+document.querySelector("#nextSeventh").addEventListener('click', () => {})
+document.querySelector("#nextEighth").addEventListener('click', () => {})
+
+
 
 function testRun() {
     // move to first spot after 2 seconds and then next and then so on
