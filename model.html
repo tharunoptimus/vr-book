@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Model</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+    <a-scene >
+        <a-entity position="0 0.1 -5" rotation="0 0 0" movement-controls="fly: true">
+            <a-entity camera look-controls wasd-controls="acceleration: 4">
+
+                <a-entity position="0 0 -3" geometry="primitive: ring; radiusInner: 0.05; radiusOuter: 0.08;"
+                    material="color: cyan; shader: flat" cursor="maxDistance: 30; fuse: true">
+
+                    <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="0.2 0.2 0.2"
+                        to="1 1 1" dur="150"></a-animation>
+
+                    <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1"
+                        to="0.2 0.2 0.2" dur="750"></a-animation>
+
+                </a-entity>
+            </a-entity>
+        </a-entity>
+        <!-- <a-entity light="type:point; castShadow:true;" position="0 1 0"></a-entity> -->
+
+        <a-assets>
+            <a-asset-item id="scene" src="/assets/models/scene.gltf">
+                <a-animation attribute="rotation" begin="mouseenter" end="click" dur="1000" to="0 360 0"
+                    repeat="indefinite">
+                </a-animation>
+            </a-asset-item>
+        </a-assets>
+
+        <a-entity gltf-model="#scene" scale="1 1 1" position="0 0 0"></a-entity>
+
+        <a-sky color="#ECECEC"></a-sky>
+
+        <script>
+            var camera = document.querySelector('a-entity[camera]')
+            console.log(camera);
+        </script>
+
+    </a-scene>
+</body>
+
+</html>
