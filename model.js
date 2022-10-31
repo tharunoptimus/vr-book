@@ -1,3 +1,12 @@
+var camera = document.querySelector("#anchor")
+console.dir(camera)
+// function arrayToObject(a){let r={};return r.x=a[0],r.y=a[1],r.z=a[2],r}var camera=document.querySelector("#anchor");let array=[];array.push(camera.object3D.position.x),array.push(camera.object3D.position.y),array.push(camera.object3D.position.z),arrayToObject(array);
+let startingPoint = {
+    "x": -25.904088393201196,
+    "y": 24.508831959192033,
+    "z": -16.557635642977598
+}
+
 
 let firstSpot = {
     x: -4.4036819083451295,
