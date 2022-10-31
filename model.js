@@ -1,91 +1,127 @@
 
 let firstSpot = {
-    x: -2.80,
-    y: -1.72,
-    z: 0.58
+    x: -4.4036819083451295,
+    y: -1.7130040172565506,
+    z: 1.0401400866140904
 }
 
 let secondSpot = {
-    x: -3.40,
-    y: -1.90,
-    z: 10.14
+    x: -4.863264634035892,
+    y: -1.5729439743469966,
+    z: 11.361438220831689
 }
 
 let thirdSpot = {
-    x: -2.65,
-    y: -1.80,
-    z: 21.09
+    x: -4.250657368646739,
+    y: -1.4006771606190962,
+    z: 21.734348582582978
 }
 
 let fourthSpot = {
-    x: -12.31,
-    y: 1.05,
-    z: 28.45
+    x: -12.38877332137508,
+    y: 0.3311254395614784,
+    z: 29.21812784032301
 }
 
 let fifthSpot = {
-    x: -32.66,
-    y: -2.51,
-    z: 28.25
+    x: -35.0466767684293,
+    y: -3.2437044316245203,
+    z: 29.72909169859804
 }
 
 let sixthSpot = {
-    x: -8.83,
-    y: 2.11,
-    z: 21.32
+    "x": -16.330346407559603,
+    "y": 1.2759235196256982,
+    "z": 17.790676193981337
 }
 
 let seventhSpot = {
-    x: -11.15,
-    y: 0.54,
-    z: 2.87
+    "x": -11.140684686670737,
+    "y": 1.8492447333341975,
+    "z": 4.7149387078883755
 }
 
 let eightSpot = {
-    x: -31.94,
-    y: -0.56,
-    z: 2.35
+    "x": -30.522670349274033,
+    "y": 0.7023224583135896,
+    "z": 1.819407862865846
 }
 
 let ninethSpot = {
-    x: -31.08,
-    y: -1.64,
-    z: -24.85
+    "x": -30.754261389946112,
+    "y": 0.6864115239197299,
+    "z": -23.52924908277821
 }
 
 let tenthSpot = {
-    x: -9.51,
-    y: 0.68,
-    z: -24.96
+    "x": -6.001961062609162,
+    "y": 2.0796470426658997,
+    "z": -23.6342003615527
 }
 
 let eleventhSpot = {
-    x: 4.29,
-    y: 0.61,
-    z: -20.80
+    "x": 7.618028028634108,
+    "y": 1.7923599500506262,
+    "z": -16.782688087521326
 }
 
 let twelvethSpot = {
-    x: 5.54,
-    y: 0.77,
-    z: -12.01
+    "x": 6.381414810894141,
+    "y": 0.971023969523452,
+    "z": -10.086772641540747
 }
 
 let thirteenthSpot = {
-    x: 3.22,
-    y: 0.66,
-    z: -15.41
+    "x": -14.458659957367953,
+    "y": 1.1502880757129608,
+    "z": -11.483046022988665
 }
 
 let fourteenthSpot = {
-    x: 17.92,
-    y: -1.23,
-    z: 5.08
+    "x": 6.381414810894141,
+    "y": 0.971023969523452,
+    "z": -10.086772641540747
+}
+
+let fifteenSpot = {
+    "x": 8.059554897167299,
+    "y": 2.1399787167017017,
+    "z": -9.804286187206623
+}
+
+let sixteenSpot = {
+    "x": 23.173594042884602,
+    "y": 0.27200547154172633,
+    "z": 7.969080715391346
 }
 
 let lastSpot = {
     x: -15.61,
     y: 17.13,
     z: 56.66
+}
+
+
+
+function testRun() {
+    // move to first spot after 2 seconds and then next and then so on
+    
+    setTimeout(() => moveCamera(firstSpot), 2000)
+    setTimeout(() => moveCamera(secondSpot), 4000)
+    setTimeout(() => moveCamera(thirdSpot), 6000)
+    setTimeout(() => moveCamera(fourthSpot), 8000)
+    setTimeout(() => moveCamera(fifthSpot), 10000)
+    setTimeout(() => moveCamera(sixthSpot), 12000)
+    setTimeout(() => moveCamera(seventhSpot), 14000)
+    setTimeout(() => moveCamera(eightSpot), 16000)
+    setTimeout(() => moveCamera(ninethSpot), 18000)
+    setTimeout(() => moveCamera(tenthSpot), 20000)
+    setTimeout(() => moveCamera(eleventhSpot), 22000)
+    setTimeout(() => moveCamera(twelvethSpot), 24000)
+    setTimeout(() => moveCamera(thirteenthSpot), 26000)
+    setTimeout(() => moveCamera(fourteenthSpot), 28000)
+    setTimeout(() => moveCamera(fifteenSpot), 30000)
+    setTimeout(() => moveCamera(sixteenSpot), 32000)
+    setTimeout(() => moveCamera(lastSpot), 34000)
 }
 
