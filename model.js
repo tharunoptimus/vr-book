@@ -207,7 +207,7 @@ document.querySelector("#nextSeventh").addEventListener('click', () => {
 document.querySelector("#nextSixth").addEventListener('click', () => {
     moveCamera(fifteenSpot)
     setTimeout(() => moveCamera(sixteenSpot), 3000)
-    setTimeout(() => playAudio(12), 2000)
+    setTimeout(() => playAudio(12), 4000)
 })
 
 document.querySelector("#nextEighth").addEventListener('click', () => {
