@@ -120,16 +120,50 @@ document.querySelector("#playSixth").addEventListener('click', () => {})
 document.querySelector("#playSeventh").addEventListener('click', () => {})
 document.querySelector("#playEighth").addEventListener('click', () => {})
 
-document.querySelector("#nextFirst").addEventListener('click', () => {})
-document.querySelector("#nextSecond").addEventListener('click', () => {})
-document.querySelector("#nextThird").addEventListener('click', () => {})
-document.querySelector("#nextFourth").addEventListener('click', () => {})
-document.querySelector("#nextFifth").addEventListener('click', () => {})
-document.querySelector("#nextSixth").addEventListener('click', () => {})
-document.querySelector("#nextSeventh").addEventListener('click', () => {})
-document.querySelector("#nextEighth").addEventListener('click', () => {})
+document.querySelector("#nextFirst").addEventListener('click', () => {
+    moveCamera(secondSpot)
+})
+document.querySelector("#nextSecond").addEventListener('click', () => {
+    moveCamera(thirdSpot)
+})
+document.querySelector("#nextThird").addEventListener('click', () => {
+    moveCamera(fourthSpot)
+    setTimeout(() => moveCamera(fifthSpot), 3000)
+})
+document.querySelector("#nextFourth").addEventListener('click', () => {
+    moveCamera(sixthSpot)
+})
+document.querySelector("#nextFifth").addEventListener('click', () => {
+    moveCamera(seventhSpot)
+    setTimeout(() => {
+        moveCamera(eightSpot)
+        setTimeout(() => {
+            moveCamera(ninethSpot)
+            setTimeout(() => {
+                moveCamera(tenthSpot)
+                setTimeout(() => {
+                    moveCamera(eleventhSpot)
+                    setTimeout(() => {
+                        moveCamera(twelvethSpot)
+                        setTimeout(() => moveCamera(thirteenthSpot), 3000)
+                    }, 3000)
+                }, 3000)
+            }, 3000)
+        }, 3000)
+    }, 3000)
+})
+document.querySelector("#nextSeventh").addEventListener('click', () => {
+    moveCamera(fourteenthSpot)
+})
 
+document.querySelector("#nextSixth").addEventListener('click', () => {
+    moveCamera(fifteenSpot)
+    setTimeout(() => moveCamera(sixteenSpot), 3000)
+})
 
+document.querySelector("#nextEighth").addEventListener('click', () => {
+    moveCamera(lastSpot)
+})
 
 
 function moveCamera(position) {
@@ -140,3 +174,4 @@ function moveCamera(position) {
     })
 }
 
+setTimeout(() => moveCamera(firstSpot), 2000)
