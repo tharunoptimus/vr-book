@@ -149,51 +149,75 @@ document.querySelector("#playEighth").addEventListener('click', () => {
 
 document.querySelector("#nextFirst").addEventListener('click', () => {
     moveCamera(secondSpot)
+    setTimeout(() => playAudio(2), 500)
+
 })
 document.querySelector("#nextSecond").addEventListener('click', () => {
     moveCamera(thirdSpot)
+    setTimeout(() => playAudio(3), 500)
 })
 document.querySelector("#nextThird").addEventListener('click', () => {
     moveCamera(fourthSpot)
-    setTimeout(() => moveCamera(fifthSpot), 3000)
+    setTimeout(() => {
+        playAudio(4)
+    }, 0)
+    setTimeout(() => {
+        moveCamera(fifthSpot)
+        setTimeout(() => playAudio(5), 0)
+    }, 6000)
+    
 })
 document.querySelector("#nextFourth").addEventListener('click', () => {
     moveCamera(sixthSpot)
+    setTimeout(() => playAudio(6), 500)
 })
 document.querySelector("#nextFifth").addEventListener('click', () => {
-    moveCamera(seventhSpot)
+    playAudio(7)
     setTimeout(() => {
-        moveCamera(eightSpot)
+        moveCamera(seventhSpot)
         setTimeout(() => {
-            moveCamera(ninethSpot)
+            moveCamera(eightSpot)
             setTimeout(() => {
-                moveCamera(tenthSpot)
+                moveCamera(ninethSpot)
                 setTimeout(() => {
-                    moveCamera(eleventhSpot)
+                    moveCamera(tenthSpot)
+                    playAudio(8)
                     setTimeout(() => {
-                        moveCamera(twelvethSpot)
-                        setTimeout(() => moveCamera(thirteenthSpot), 3000)
-                    }, 3000)
+                        moveCamera(eleventhSpot)
+                        playAudio(9)
+                        setTimeout(() => {
+                            moveCamera(twelvethSpot)
+                            setTimeout(() => {
+                                moveCamera(thirteenthSpot)
+                                setTimeout(() => playAudio(10), 3000)
+                            }, 3000)
+                            
+                        }, 3000)
+                    }, 4500)
                 }, 3000)
             }, 3000)
         }, 3000)
-    }, 3000)
+    }, 1500)
 })
 document.querySelector("#nextSeventh").addEventListener('click', () => {
     moveCamera(fourteenthSpot)
+    setTimeout(() => playAudio(11), 500)
 })
 
 document.querySelector("#nextSixth").addEventListener('click', () => {
     moveCamera(fifteenSpot)
     setTimeout(() => moveCamera(sixteenSpot), 3000)
+    setTimeout(() => playAudio(12), 2000)
 })
 
 document.querySelector("#nextEighth").addEventListener('click', () => {
     moveCamera(lastSpot)
+    setTimeout(() => playAudio(13), 1000)
 })
 
 document.querySelector("#nextStart").addEventListener('click', () => {
     moveCamera(firstSpot)
+    setTimeout(() => playAudio(1), 1000)
 })
 
 function moveCamera(position) {
