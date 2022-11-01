@@ -1,3 +1,14 @@
+let audio = document.querySelector('#backgroundPlayback')
+audio.volume = 0.2
+audio.play().then().catch(() => setTimeout(() => {
+    audio.play();
+}))
+
+function playAudio(track) {
+    let audio = document.querySelector(`[data-audioId="${track}"]`);
+    audio.play();
+}
+
 var camera = document.querySelector("#anchor")
 console.dir(camera)
 // function arrayToObject(a){let r={};return r.x=a[0],r.y=a[1],r.z=a[2],r}var camera=document.querySelector("#anchor");let array=[];array.push(camera.object3D.position.x),array.push(camera.object3D.position.y),array.push(camera.object3D.position.z),arrayToObject(array);
