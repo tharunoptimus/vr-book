@@ -171,6 +171,7 @@ document.querySelector("#nextFourth").addEventListener('click', () => {
     moveCamera(sixthSpot)
     setTimeout(() => playAudio(6), 500)
 })
+console.log(liangBarsky(0, 0, 10, 10, 5, 5, 15, 15))
 document.querySelector("#nextFifth").addEventListener('click', () => {
     playAudio(7)
     setTimeout(() => {
@@ -226,4 +227,34 @@ function moveCamera(position) {
         dur: 1000,
         to: position,
     })
+}
+
+function liangBarsky(x1, y1, x2, y2, xmin, ymin, xmax, ymax) {
+    let dx = x2 - x1;
+    let dy = y2 - y1;
+    let p = [-dx, dx, -dy, dy];
+    let q = [x1 - xmin, xmax - x1, y1 - ymin, ymax - y1];
+    let u1 = 0;
+    let u2 = 1;
+    let flag = 0;
+    for (let i = 0; i < 4; i++) {
+        if (p[i] == 0) {
+            if (q[i] < 0) {
+                flag = 1;
+                break;
+            }
+        } else {
+            let u = q[i] / p[i];
+            if (p[i] < 0) {
+                u1 = Math.max(u1, u);
+            } else {
+                u2 = Math.min(u2, u);
+            }
+        }
+    }
+    if (flag == 1 || u1 > u2) {
+        return false;
+    } else {
+        return true;
+    }
 }
