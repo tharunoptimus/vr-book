@@ -165,6 +165,9 @@ document.querySelector("#nextEighth").addEventListener('click', () => {
     moveCamera(lastSpot)
 })
 
+document.querySelector("#nextStart").addEventListener('click', () => {
+    moveCamera(firstSpot)
+})
 
 function moveCamera(position) {
     camera.setAttribute('animation__moveCamera', {
@@ -173,5 +176,3 @@ function moveCamera(position) {
         to: position,
     })
 }
-
-setTimeout(() => moveCamera(firstSpot), 2000)
