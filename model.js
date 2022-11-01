@@ -122,14 +122,30 @@ let lastSpot = {
 }
 
 
-document.querySelector("#playFirst").addEventListener('click', () => {})
-document.querySelector("#playSecond").addEventListener('click', () => {})
-document.querySelector("#playThird").addEventListener('click', () => {})
-document.querySelector("#playFourth").addEventListener('click', () => {})
-document.querySelector("#playFifth").addEventListener('click', () => {})
-document.querySelector("#playSixth").addEventListener('click', () => {})
-document.querySelector("#playSeventh").addEventListener('click', () => {})
-document.querySelector("#playEighth").addEventListener('click', () => {})
+document.querySelector("#playFirst").addEventListener('click', () => {
+    playAudio(1)
+})
+document.querySelector("#playSecond").addEventListener('click', () => {
+    playAudio(2)
+})
+document.querySelector("#playThird").addEventListener('click', () => {
+    playAudio(3)
+})
+document.querySelector("#playFourth").addEventListener('click', () => {
+    playAudio(5)
+})
+document.querySelector("#playFifth").addEventListener('click', () => {
+    playAudio(6)
+})
+document.querySelector("#playSixth").addEventListener('click', () => {
+    playAudio(10)
+})
+document.querySelector("#playSeventh").addEventListener('click', () => {
+    playAudio(10)
+})
+document.querySelector("#playEighth").addEventListener('click', () => {
+    playAudio(10)
+})
 
 document.querySelector("#nextFirst").addEventListener('click', () => {
     moveCamera(secondSpot)
