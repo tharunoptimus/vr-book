@@ -131,25 +131,12 @@ document.querySelector("#nextEighth").addEventListener('click', () => {})
 
 
 
-function testRun() {
-    // move to first spot after 2 seconds and then next and then so on
-    
-    setTimeout(() => moveCamera(firstSpot), 2000)
-    setTimeout(() => moveCamera(secondSpot), 4000)
-    setTimeout(() => moveCamera(thirdSpot), 6000)
-    setTimeout(() => moveCamera(fourthSpot), 8000)
-    setTimeout(() => moveCamera(fifthSpot), 10000)
-    setTimeout(() => moveCamera(sixthSpot), 12000)
-    setTimeout(() => moveCamera(seventhSpot), 14000)
-    setTimeout(() => moveCamera(eightSpot), 16000)
-    setTimeout(() => moveCamera(ninethSpot), 18000)
-    setTimeout(() => moveCamera(tenthSpot), 20000)
-    setTimeout(() => moveCamera(eleventhSpot), 22000)
-    setTimeout(() => moveCamera(twelvethSpot), 24000)
-    setTimeout(() => moveCamera(thirteenthSpot), 26000)
-    setTimeout(() => moveCamera(fourteenthSpot), 28000)
-    setTimeout(() => moveCamera(fifteenSpot), 30000)
-    setTimeout(() => moveCamera(sixteenSpot), 32000)
-    setTimeout(() => moveCamera(lastSpot), 34000)
+
+function moveCamera(position) {
+    camera.setAttribute('animation__moveCamera', {
+        property: 'position',
+        dur: 1000,
+        to: position,
+    })
 }
 
