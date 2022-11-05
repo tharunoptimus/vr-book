@@ -71,6 +71,12 @@
                     repeat="indefinite">
                 </a-animation>
             </a-asset-item>
+            
+            <a-asset-item id="dog" src="/assets/models/dog.gltf">
+                <a-animation attribute="rotation" begin="mouseenter" end="click" dur="1000" to="0 360 0"
+                    repeat="indefinite">
+                </a-animation>
+            </a-asset-item>
 			<img alt="3D Image" id="archDiagram" src="assets/images/vrbook.png">
         </a-assets>
 
@@ -81,6 +87,8 @@
         <a-entity static-body="" gltf-model="#sheep" scale="0.5 0.5 0.5" position="18.56107 -1.42189 12.32625" animation-mixer="" rotation=""></a-entity>
         <a-entity static-body="" gltf-model="#sheep" scale="0.5 0.5 0.5" position="20.7766 -1.54032 14.32518" animation-mixer="" rotation="0 270 0"></a-entity>
         <a-entity static-body="" gltf-model="#sheep" scale="0.5 0.5 0.5" position="17.8142 -1.3038 13.70107" animation-mixer="" rotation="0 90 0"></a-entity>
+        
+        <a-entity static-body="" gltf-model="#dog" scale="0.005 0.005 0.005" position="22.23367 -1.99584 3.43647" animation-mixer="" rotation="0 0 -10"></a-entity>
         
         <a-rounded-box radius="0.1" material="color:#44bd32" id="nextStart" data-go="secondSpot" position="-23.90 19.508 -16.557" height="1" width="1" depth="1"></a-rounded-box >
 
