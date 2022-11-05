@@ -77,6 +77,12 @@
                     repeat="indefinite">
                 </a-animation>
             </a-asset-item>
+            
+            <a-asset-item id="village" src="/assets/models/village.gltf">
+                <a-animation attribute="rotation" begin="mouseenter" end="click" dur="1000" to="0 360 0"
+                    repeat="indefinite">
+                </a-animation>
+            </a-asset-item>
 			<img alt="3D Image" id="archDiagram" src="assets/images/vrbook.png">
         </a-assets>
 
@@ -89,6 +95,8 @@
         <a-entity static-body="" gltf-model="#sheep" scale="0.5 0.5 0.5" position="17.8142 -1.3038 13.70107" animation-mixer="" rotation="0 90 0"></a-entity>
         
         <a-entity static-body="" gltf-model="#dog" scale="0.005 0.005 0.005" position="22.23367 -1.99584 3.43647" animation-mixer="" rotation="0 0 -10"></a-entity>
+        
+        <a-entity static-body="" gltf-model="/assets/models/village.gltf" scale="0.001 0.001 0.001" position="-15.24665 -0.37458 19.80994" animation-mixer="" rotation="0 0 9"></a-entity>
         
         <a-rounded-box radius="0.1" material="color:#44bd32" id="nextStart" data-go="secondSpot" position="-23.90 19.508 -16.557" height="1" width="1" depth="1"></a-rounded-box >
 
@@ -127,7 +135,6 @@
 
 </html>
 
-<!-- https://sketchfab.com/3d-models/low-poly-sheep-dbce62f6bbe940f087a8b9ba1d025355 -->
 <!-- https://sketchfab.com/3d-models/deer-non-commercial-211dee27721d4a92874a171b1e7869e0 -->
 <!-- https://sketchfab.com/3d-models/facial-body-animated-party-f-0001-actorcore-a676e4d13bea4ee6b6a2ba6201d5308b -->
 <!-- https://sketchfab.com/3d-models/chicken-walkcycle-17a2a56e1ea04288895d17075442b305 -->
