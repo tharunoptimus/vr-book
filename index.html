@@ -74,9 +74,12 @@
 		<a-box id="prev" position="-9.6 -22 -19.5" width="5" height="0.3" scale="5 5 3" color="#ff0000"></a-box>
 		<a-box id="next" position="15.8 -22 -19.5" width="5" height="0.3" scale="5 5 3" color="#00ff00"></a-box>
 
+		<script>
+		if('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('./sw.js')
+		}
+		</script>
 
-		<a-sky src="#sw"></a-sky>
-		<script type="text/javascript" src="./app.js"></script>
 	</a-scene>
 </body>
 
