@@ -221,11 +221,12 @@ document.querySelector("#nextStart").addEventListener('click', () => {
     setTimeout(() => playAudio(1), 1000)
 })
 
-function moveCamera(position) {
+function moveCamera(position, duration = 1000) {
     camera.setAttribute('animation__moveCamera', {
         property: 'position',
         dur: 1000,
         to: position,
+        dur: duration
     })
 }
 
