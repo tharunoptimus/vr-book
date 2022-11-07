@@ -163,7 +163,7 @@ document.querySelector("#nextThird").addEventListener('click', () => {
     }, 0)
     setTimeout(() => {
         moveCamera(fifthSpot)
-        setTimeout(() => playAudio(5), 0)
+        setTimeout(() => playAudio(5), 1000)
     }, 6000)
     
 })
