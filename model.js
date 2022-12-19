@@ -1,8 +1,21 @@
-let audio = document.querySelector('#backgroundPlayback')
-audio.volume = 0.2
-audio.play().then().catch(() => setTimeout(() => {
-    audio.play();
-}))
+function playBGSound() {
+    let audio = document.querySelector('#backgroundPlayback')
+    try {
+        audio.volume = 0.2
+        audio
+            .play()
+            .then()
+            .catch(() =>
+                setTimeout(() => {
+                    playBGSound()
+                })
+            )
+    } catch (error) {
+        console.log("User has not interacted with the page yet")
+    }
+}
+
+playBGSound()
 
 function stopPlaying() {
 	let audios = document.querySelectorAll("audio")
@@ -17,6 +30,11 @@ function playAudio(track) {
     stopPlaying()
     let audio = document.querySelector(`[data-audioId="${track}"]`)
     audio.play();
+}
+
+
+async function sleep(ms) {
+    await new Promise(resolve => setTimeout(resolve, ms));
 }
 
 var camera = document.querySelector("#anchor")
