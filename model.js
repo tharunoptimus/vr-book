@@ -4,8 +4,18 @@ audio.play().then().catch(() => setTimeout(() => {
     audio.play();
 }))
 
+function stopPlaying() {
+	let audios = document.querySelectorAll("audio")
+	audios.forEach(audio => {
+		if (audio.getAttribute("data-audioType") == "background") return
+		audio.pause()
+		audio.currentTime = 0
+	})
+}
+
 function playAudio(track) {
-    let audio = document.querySelector(`[data-audioId="${track}"]`);
+    stopPlaying()
+    let audio = document.querySelector(`[data-audioId="${track}"]`)
     audio.play();
 }
 
