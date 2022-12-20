@@ -1,7 +1,7 @@
 function playBGSound() {
     let audio = document.querySelector('#backgroundPlayback')
     try {
-        audio.volume = 0.2
+        audio.volume = 0.9
         audio
             .play()
             .then()
