@@ -244,26 +244,34 @@
             //     }, 1000);
             // }
 
-            async function readyToDetect() {
+            // async function readyToDetect() {
                 
-                if(working) {
-                    await sleep(1000)
-                    readyToDetect()
-                }
+            //     if(working) {
+            //         await sleep(1000)
+            //         readyToDetect()
+            //     }
 
-                let limit = 15
-                for (let i = 0; i < 15; i++) {
-                    await sleep(1000)
-                    let nextDetect = document.querySelector('#nextDetect');
-                    nextDetect.setAttribute('value', 'Next Detect in ' + limit + ' seconds');
-                    nextDetect.setAttribute('color', 'white');
-                    limit = limit - 1;
-                }
+            //     let limit = 30
+            //     for (let i = 0; i < 30; i++) {
+            //         await sleep(1000)
+            //         let nextDetect = document.querySelector('#nextDetect');
+            //         nextDetect.setAttribute('value', 'Next Detect in ' + limit + ' seconds');
+            //         nextDetect.setAttribute('color', 'white');
+            //         limit = limit - 1;
+            //     }
+            //     startDetecting()
+            //     detect()
+            //     await sleep(2000)
+            //     readyToDetect()
+            // }
+
+            async function readyToDetect() {
+                await sleep(30000)
                 startDetecting()
                 detect()
-                await sleep(2000)
-                readyToDetect()
             }
+
+            setInterval(readyToDetect, 30000)
 
             readyToDetect()
 
