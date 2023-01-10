@@ -42,6 +42,12 @@
                     <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1"
                         to="0.2 0.2 0.2" dur="500"></a-animation>
 
+                    <a-entity id="leftController" oculus-touch-controls="hand: left" laser-controls="hand: left"
+                        raycaster="objects: .clickable"></a-entity>
+
+                    <a-entity id="rightController" oculus-touch-controls="hand: right" laser-controls="hand: right"
+                        raycaster="objects: .clickable"></a-entity>
+
                 </a-entity>
             </a-entity>
         </a-entity>
@@ -104,15 +110,8 @@
             <img alt="3D Image" id="archDiagram" src="assets/images/vrbook.png">
         </a-assets>
 
-        <a-entity oculus-touch-controls="hand: left"></a-entity>
-        <a-entity oculus-touch-controls="hand: right"></a-entity>
 
 
-        <a-entity id="leftController" oculus-touch-controls="hand: left" laser-controls="hand: left"
-            raycaster="objects: .clickable"></a-entity>
-
-        <a-entity id="rightController" oculus-touch-controls="hand: right" laser-controls="hand: right"
-            raycaster="objects: .clickable"></a-entity>
 
         <a-entity static-body gltf-model="#scene" scale="1 1 1" position="0 0 0" animation-mixer></a-entity>
         <a-entity static-body="" gltf-model="#king" scale="0.05 0.05 0.05" position="-10.05767 6.6285 -17.01348"
