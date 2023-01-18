@@ -2,8 +2,9 @@
 <html>
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Interactive Reading Environment in Web-Based Virtual Reality, ver. 1.0</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script src="./assets/js/aframe.min.js"></script>
     <script src="./assets/js/pdf.min.js"></script>
     <script src="./assets/js/htmlembed.js"></script>
@@ -25,7 +26,7 @@
             <div class="title">Please load a pdf file</div>
             <div class="selectFrom">
                 <div id="my_pdf_viewer" style="text-align: center">
-                    <input id="pdf-upload" type="file" style="margin-top: 40px;" />
+                    <input id="pdf-upload" type="file" style="margin-top: 40px;"  title="Select Book"/>
                     <div id="canvas_container">
                         <canvas id="pdf_renderer" style="display:none;"></canvas>
                     </div>
