@@ -1,5 +1,5 @@
 document.querySelector("#microph").addEventListener("click", function () {
-	window.location.href = "./model";
+	window.location.href = "./tamil";
 })
 
 let i = 0

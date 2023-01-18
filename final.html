@@ -28,7 +28,7 @@
     <audio class="playback" data-audioId="12" src="./assets/audio/12.mp3"></audio>
     <audio class="playback" data-audioId="13" src="./assets/audio/13.mp3"></audio>
 
-    <audio id="backgroundPlayback" data-audioType="background" src="./medieval.mp3" autoplay></audio>
+    <audio id="backgroundPlayback" data-audioType="background" src="./assets/audio/medieval.mp3" autoplay></audio>
     <a-scene renderer="antialias: true;
     colorManagement: true;
     sortObjects: true;
@@ -200,7 +200,7 @@
 
                 working = true
                 console.time("CREATE_WORKER")
-                let worker = new Worker('worker.js')
+                let worker = new Worker('./assets/js/worker.js')
                 console.timeEnd("CREATE_WORKER")
 
                 worker.onmessage = function (e) {
