@@ -7,17 +7,12 @@
     <script src="./assets/js/aframe.min.js"></script>
     <script src="./assets/js/pdf.min.js"></script>
     <script src="./assets/js/htmlembed.js"></script>
-    <!-- Word Vector -->
-    <script src="data/wordVector.js"></script>
-    <script src="./assets/js/word2vecutils.js"></script>
 
     <!-- New Navigation -->
     <script src="./assets/js/raycaster-extras.js"></script>
     <script src="./assets/js/controller-listener.js"></script>
     <script src="./assets/js/player-move.js"></script>
     <!-- A-Frame GLTF Exporter -->
-    <script src="./assets/js/aframe-gltf-exporter.js"></script>
-    <script src="./assets/js/gltf-exporter-component.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
@@ -60,7 +55,6 @@
             <img id="soundOff" src="./assets/images/soundOff.png" alt="2D Image Asset">
             <img id="notesOn" src="./assets/images/notesOn.png" alt="2D Image Asset">
             <img id="notesOff" src="./assets/images/notesOff.png" alt="2D Image Asset">
-            <img id="export" src="./assets/images/export.png" alt="2D Image Asset">
         </a-assets>
 
         <!--Hidden NavMesh-->
@@ -131,10 +125,7 @@
                     position="0.07 -0.05 0.02"></a-entity>
 
 
-                <!-- Export Question -->
-                <a-entity id="exportModel" onclick="exportModel()" class="navButton" geometry="primitive: plane;"
-                    material="src: #export; transparent: true; opacity: 1; alpha-test: 0.5" scale="0.08 0.08 0.08"
-                    material="transparent: true; opacity: 1; alpha-test: 0.5" position="0.17 -0.05 0.02"></a-entity>
+                
 
                 <!-- Left Answer's screen, which is hidden and will be printed upon request -->
                 <a-entity raycaster-target="canGrab: true;" position="-2.5 0.5 0"

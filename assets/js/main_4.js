@@ -135,7 +135,7 @@ document.querySelector("#pdf-upload").addEventListener("change", function (e) {
                             }
 
                             document.getElementById("intro4").style.display = "none";
-                            var sounds = ['3_arts.mp3', '5_tale.mp3', 'bgtamil.mp3'];
+                            var sounds = ['bgtamil.mp3', 'bgtamil.mp3', 'bgtamil.mp3'];
                             var selectedSound = sounds[Math.floor(Math.random() * sounds.length)];
                             document.getElementById('soundlink').setAttribute('sound', 'src: url(assets/audio/' + selectedSound + '); loop: true');
                             document.getElementById('soundlink').components.sound.playSound();
